@@ -13,47 +13,13 @@
 
 <body>
 
-    <div class="logo">
-        <img src="../static/cancer.png" alt="data_analytics">
-        <h1>Together we will beat cancer</h1>
-        <div class="donate">
 
-            <button><b> Donate</b></button>
-        </div>
-    </div>
-    <hr>
     <div class="navbar">
+        <a href="#about">Home</a>
+        <a href="#predict">Predict</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact Us</a>
 
-        <div class="dropdown">
-            <button class="dropbtn">Home
-
-            </button>
-            <div class="dropdown-content">
-                <a href="#about">Our Research</a>
-                <a href="#about">About Cancer</a>
-                <a href="#about">About Us</a>
-
-
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Predict
-
-            </button>
-            <div class="dropdown-content">
-                <a href="#file-upload">Defect</a>
-                <a href="#file-upload">Prediction</a>
-                <a href="#file-upload">Upload</a>
-
-            </div>
-
-        </div>
-        <div id="team">
-            <a hreaf="#file:///home/student/Desktop/contact-us.html">Team</a>
-        </div>
-        <div id="contact-us">
-            <a hreaf="#contact-us">Contact Us</a>
-        </div>
 
 
 
@@ -133,52 +99,113 @@
                 et dolore magna.</p1>
         </div>
     </div>
-    <div class="background">
 
-        <div id="file-upload">
-            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
-    
-       <input name="file" type="file"  accept="image/*" id="upload-box">
-    <br><br>
-    <center><input type="submit" value="Submit" id="upload-box"></center>
-   
-</form>
- <!--<div id="file-upload">
-            <input type="file" id="upload-box">-->
+    <div id="predict">
+        <div class="background">
+            <div id="file-upload">
+                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
 
+                    <input name="file" type="file" accept="image/*" id="upload-box">
+                    <br><br>
+
+                    <center><input type="submit" class="submit" value="Submit" id="upload-box"></center>
+
+                </form>
+                <!--<div id="file-upload">
+                    <input type="file" id="upload-box">-->
+
+            </div>
         </div>
     </div>
-    <div class="latest_insights">
+    <div id="team">
+
+
+        <div class="latest_insights">
+            <div class="review1">
+                <img src="../static/scientist1.jpg">
+                <div class="person_name">
+                    <img src="../static/user1.jpg">
+                    <p2><b>Alex Morgon</b></p2>
+
+                </div>
+                <h5>Six Ways to Make Smarter<br> Decisions</h5>
+            </div>
+            <div class="review1">
+                <img src="../static/scientist3.jpg">
+                <div class="person_name">
+                    <img src="../static/user3.jpg">
+                    <p2><b>Sarah Taylor</b></p2>
+
+                </div>
+                <h5>The Challenges to Tackle You<br> Start With AI</h5>
+            </div>
+            <div class="review1">
+                <img src="../static/scientist1.jpg">
+                <div class="person_name">
+                    <img src="../static/user2.jpg">
+                    <p2><b>Sarah Taylor</b></p2>
+
+                </div>
+                <h5>The Challenges to Tackle You<br> Start With AI</h5>
+            </div>
+            <div class="review1">
+                <img src="../static/scientist2.jpg">
+                <div class="person_name">
+                    <img src="../static/user1.jpg">
+                    <p2><b>Sarah Taylor</b></p2>
+
+                </div>
+                <h5>The Challenges to Tackle You<br> Start With AI</h5>
+            </div>
+            
+                
+        </div>
+    </div>
+    </div>
+
+    <div class="row2">
         <div class="review1">
             <img src="../static/scientist1.jpg">
             <div class="person_name">
-                <img src="images/user1.jpg">
+                <img src="../static/user1.jpg">
                 <p2><b>Alex Morgon</b></p2>
-                <i class="fa fa-folder-o"></i><p2><b>april 30,2020</b></p2>
+
             </div>
-            <h3>Six Ways to Make Smarter<br> Decisions</h3>
-        </div>
-        <div class="review1">
-            <img src="../static/scientist2.jpg">
-            <div class="person_name">
-                <img src="images/user2.jpg">
-                <p2><b>Sarah Taylor</b></p2>
-                <i class="fa fa-folder-o"></i><p2><b>april 28,2020</b></p2>
-            </div>
-            <h3>The Challenges to Tackle You<br> Start With AI</h3>
+            <h5>Six Ways to Make Smarter<br> Decisions</h5>
         </div>
         <div class="review1">
             <img src="../static/scientist3.jpg">
             <div class="person_name">
-                <img src="images/user3.jpg">
-                <p2><b>David Warner</b></p2>
-                <i class="fa fa-folder-o"></i><p2><b>april 29,2020</b></p2>
+                <img src="../static/user3.jpg">
+                <p2><b>Sarah Taylor</b></p2>
+
             </div>
-            <h3>Why Organization Want an<br>Analytic Platform</h3>
+            <h5>The Challenges to Tackle<br> You Start With AI</h5>
         </div>
+        <div class="review1">
+            <img src="../static/scientist1.jpg">
+            <div class="person_name">
+                <img src="../static/user2.jpg">
+                <p2><b>Sarah Taylor</b></p2>
+
+            </div>
+            <h5>The Challenges to Tackle You<br> Start With AI</h5>
+        </div>
+        <div class="review1">
+            <img src="../static/scientist2.jpg">
+            <div class="person_name">
+                <img src="../static/user1.jpg">
+                <p2><b>Sarah Taylor</b></p2>
+
+            </div>
+            <h5>The Challenges to Tackle You<br> Start With AI</h5>
+        </div>
+        
+      
+        
     </div>
 </div>
-
+</div>
     <div class="contact-us">
         <div class="footer ">
 
@@ -189,10 +216,15 @@
 
         </div>
         <h4>For More Info Follow us</h4>
+        <div id="contact">
+            <a href="#privacy policty" >privacy policy</a><br>
+            <a href="#contactus" >contactus</a>
+                </div>
+            
     </div>
+   
 
 
-    
 
 </body>
 <script src="https://kit.fontawesome.com/a6761c511f.js" crossorigin="anonymous"></script>
