@@ -1,0 +1,11 @@
+apiVersion: v1
+name: ml-flask-frontend
+description: Install a ML Flask deployment
+keywords:
+- python
+- Flask
+- Machine Learning
+version: 1.0.0
+maintainers:
+- name: Visual Velocity 
+  email: sivanaikk0903@gmail.com

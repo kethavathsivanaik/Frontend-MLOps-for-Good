@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ml-flask-frontend
+  name: ml-flask-frontend
+  namespace: {{ .Values.namespace.name }} 
+spec:
+  ports:
+  - port: {{ .Values.service.port }} 
+    protocol: TCP
+    targetPort: {{ .Values.service.port }}
+  selector:
+    app: ml-flask-frontend
+  type: {{ .Values.service.type }} 
