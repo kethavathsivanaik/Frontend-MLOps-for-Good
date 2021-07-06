@@ -1,96 +1,95 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+*{
+  padding:0;
+  margin:0;
+  text-decoration: none;
+}
 body{
     font-family: "Lato",sans-serif;
-    padding: 10px;
-   
-}
- 
-.logo{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
 }
 
+p1{
+  font-family: cursive;
+}
 h1{
   color: rgb(41, 41, 128);
+  margin-left: 50px;
 }
 h2{
   color: rgb(41, 41, 128);
 }
-  /* Navbar container */
-  .navbar {
+.toplogo{
+  height: 70px;
+  background-image: url(../static/backgroungimg.png);
+  padding: 20px 0px;
+    background-color: #f0f0f0f0;
+    background-attachment: fixed;
+    /* background-color: white; */
+}
+/* Navbar container */
+.navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
     width:100%;
-    padding: 10px;
+    padding: 20px;
+    z-index: 1;
+    /* position: fixed; */
+    /* top:100px; */
+    /* margin-bottom:100px; */
+  }
+  .toplogo + .navbar{
+    padding-top: 30px;
   }
   
   /* Links inside the navbar */
   .navbar a {
-    float: left;
-    font-size: 18px;
+    float: right;
+    margin-right: 20px;
+    /* float: left; */
+    /* font-size: 18px; */
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7px 15px;
     text-decoration: none;
+    color: white;
+    font-size: 17px;
+    /* padding: 7px 13px; */
+    border-radius: 3px;
+    text-transform: uppercase;
   }
   
+  label.logo{
+    color: white;
+    font-size: 25px;
+    /* line-height: 80px; */
+    /* padding: 0 100px; */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  label.logo #sub{
+    font-size: 15px;
+    cursor: pointer;
+  }
+  a.active,a:hover{
+    background: rgb(13, 79, 155);
+    transition: .5s;
+  }
   /* The dropdown container */
   .dropdown {
     float: left;
     overflow: hidden;
-
   }
-  
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-  }
-  
-  /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    /* background-color: red; */
     width:auto;
+    background: rgb(13, 79, 155);
+    transition: .4s;
   }
   
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 140px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 14px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  } 
 
 .heading{
     display:block;
@@ -114,28 +113,33 @@ h2{
   
 }
 .donate button:hover{
-    
   background-color: black;
 }
 
 .about_brain-tumour{
   display: flex;
-  margin-top:40px;
+  padding: 0 50px;
+  margin:40px 0;
+  /* margin-top: 120px; */
 }
 .about_brain-tumour img{
   margin-right:30px;
 }
 .container{
   display:flex;
-  margin-top: 50px;
+  padding: 25px;
+  /* margin-top: 50px; */
 }
+
 
 #about{
   display: block;
   text-align:center;
   box-shadow: 0px 0px 3px;
-  padding: 30px;
-  margin-left:20px;
+  padding: 40px;
+  margin:0 30px;
+    /* background-color:  rgba(253, 253, 253, 0.959) */
+    background-color: #ebeaea;
 
 }
 
@@ -147,19 +151,31 @@ h2{
     position:absolute;
 
 }
+
 .background{
-  margin-top:60px;
+  position: relative;
+  /* z-index: -1; */
+  margin-top:80px;
+  padding: 150px;
   justify-content: center;
   background-color: cyan;
+  background: url("brainTumur.gif"),url("brainTumur.gif");
+  /* background-attachment: fixed; */
+  /* background-repeat:no-repeat; */
+background-size:50%;
 
 }
 #upload-box{
-  
     font-size:14px;
     border-radius:30px;
     box-shadow:3px 3px 5px black;
     outline:none;
-    
+    background: #f0f0f0;
+    font-weight: bold;
+}
+#upload-box:hover{
+  background-color: transparent;
+  border: 0.1px solid #f0f0f0;
 }
 ::-webkit-file-upload-button{
     color:white;
@@ -179,16 +195,27 @@ h2{
 .footer{
   display:flex;
   justify-content:center;
-  margin-top: 60px;
+  margin-top: 25px;
   position:sticky;
-  
 }
 .contact-us{
-  background-color: black;
-  height:160px;
+  margin-top: 20px;
+  background-color: rgb(31, 30, 30);
+  height:180px;
   margin-top: 80px;
   text-align: center;
-  margin-bottom: 10px;
+  padding: 20px;
+}
+.contact-us .footer a{
+  margin: 10px 20px;
+  /* color: rgb(13, 79, 155); */
+}
+
+#contact a{
+  color: #bdbdbd;
+  font-size: small;
+  font-weight: 100;
+font-family:sans-serif;
 }
 h4{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -203,8 +230,25 @@ h4{
   margin: 5px 2px;
   border-radius: 50px;
 }
-.fa:hover {
-  opacity: 0.7;
+
+/* .info:hover{
+  background: rgba(5, 106, 221, 0.531);
+  opacity: 1;
+  border-radius: 0;
+} */
+
+.submit {
+  background-color: rgb(13, 79, 155);
+  color: white;
+  padding: 10px;
+  width:fit-content;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  
 }
 
 .fa-facebook {
@@ -228,31 +272,61 @@ color: white;
 }
 
 /* team */
-.latest_insights{
-  margin-top: 150px;
+/* #team{
+  background-image: url("../static/backgroungimg.png") ;
+
+} */
+.row2{
+  margin-top:10px;
   display: flex;
   background-image: url("images/backgroungimg.png");
   margin-bottom: 100px;
 }
+.latest_insights{
+  margin-top:50px;
+  display: flex;
+  background-image: url("images/backgroungimg.png");
+  margin-bottom: 90px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center; 
+}
+#start_p{
+  margin-left: 50px;
+  width:950px;
+  font-family:cursive;
+  font-size: 1.4em;
+  line-height: 1.5;
+}
 .review1{
   display:block;
-  margin-left:70px;
-  box-shadow:0px 0px 3px;
-  background-color: white;
+  margin:30px;
+  padding-bottom: 50px;
+  /* box-shadow:0px 0px 3px; */
+  /* background-color: white; */
+  background-color: #ebeaea;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.293);
+  /* max-width: fit-content; */
+  flex: 1 0 21%; /* explanation below */
+  /* margin: 5px; */
+  /* height: 100px; */
+}
+.review1:hover{
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.653);
+
 }
 .review1 img{
-  height:350px;
-  width:300px;
-
+  /* height:100px; */
+  /* box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.238); */
+  width:200px;
 }
 .person_name{
   display: flex;
   margin-top: 15px;
-  justify-content:space-around;
-  
+  justify-content: center;
 }
 .person_name img{
-  border-radius: 50px;
+  border-radius: 40px;
   height:30px;
   width:30px;
   align-content: center;
@@ -261,9 +335,124 @@ p2{
   color:rgb(87, 84, 84);
   text-align: center;
 }
-h3{
+h5{
   text-align: center;
+  cursor: pointer;
 }
-h3:hover{
-  color:orangered;
+h5:hover{
+  color:rgb(13, 79, 155);
+}
+
+.submit2{
+  /* background-color: rgb(13, 79, 155); */
+  padding: 13px;
+  width: 180px;
+  color: #125688;
+}
+
+.team_members{
+  margin-top: 100px;
+  /* padding: 25px;? */
+  text-align: center;
+  text-transform:capitalize;
+  font-family:cursive;
+  font-size: 3em;
+}
+.fa:hover {
+  opacity: 1;
+  border-radius: 0;
+}
+.person_name a{
+  border-radius: 50%;
+}
+.person_name a:hover{
+  background: #55ACEE;
+  transition-timing-function: ease-out;
+  border-radius: 10%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 100px;
+}
+
+
+/* treatment */
+
+.treatment{
+  display:flex;
+  margin-top:180px;
+}
+.types-tumour{
+  display: block;
+  background-image: url("../static/backgroungimg.png");
+  width:40%;
+  height: 450px;
+}
+.brain1 {
+  display: flex;
+}
+.brain1 img{
+  margin-left: 20px;
+  height:170px;
+  border-radius: 10px;
+}
+
+.brain2 img{
+  margin-left: 80px;
+  margin-top:40px;
+  height:180px;
+  border-radius: 10px;
+}
+.brain3 img{
+  margin-top:150px;
+  margin-left:80px;
+  height:190px;
+  border-radius: 10px;
+}
+.content{
+  margin-left: 30px;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+  width: 800px;
+}
+p1 a{
+  color: black;
+}
+p1 a:hover{
+  background: transparent;
+}
+
+.final{
+  background: url("finalPage.gif");
+}
+
+.wrong-file img{
+  margin-top: 60px;
+  border-radius: 10px;
+}
+.aboutus button{
+  background-color: orangered;
+  color: white;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+
+  
+}
+.aboutus button:hover{
+  
+  background-color: black;
+}
+
+.submit2:hover{
+  background-color: black;
+  color:rgb(255, 255, 255);
 }

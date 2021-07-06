@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+  - include_vars: secure.yml
+  - name: Download Model from S3
+    aws_s3:
+      bucket: mlopsforgood-models
+      object: BT_MODEL.h5
+      dest: /app/model/BT_MODEL.h5
+      mode: get
+      aws_access_key: "{{ aws_access_key }}"
+      aws_secret_key: "{{ aws_secret_key }}"
+      region: "ap-south-1"
+
