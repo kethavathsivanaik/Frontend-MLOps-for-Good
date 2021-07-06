@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install net-tools -y
 EXPOSE 5000
 RUN chmod +x entrypoint.sh
-RUN ./entrypoint.sh
+RUN entrypoint.sh
 # command to run on container start
 
 CMD [ "flask", "run", "--host", "0.0.0.0" ]
