@@ -14,6 +14,7 @@ RUN chmod +x entrypoint.sh
 #RUN entrypoint.sh
 # command to run on container start
 
-CMD [ "flask", "run", "--host", "0.0.0.0" ]
+#CMD [ "flask", "run", "--host", "0.0.0.0" ]
 
+ENTRYPOINT /app/entrypoint.sh ; flask run --host 0.0.0.0 ; /bin/bash
 
