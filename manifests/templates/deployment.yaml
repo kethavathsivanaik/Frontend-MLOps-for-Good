@@ -22,5 +22,5 @@ spec:
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: IfNotPresent 
+        imagePullPolicy: Always
         name: ml-flask-frontend

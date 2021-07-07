@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Final</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link rel="stylesheet" href="../static/style.css">
+	<style>
+		.wrong-file img{
+        margin-top: 20px;
+    }
+		.background{
+			background-image: none;
+			padding:0;
+			margin: -25px;
+			padding-bottom: 200px;
+		}
+		.submit2{
+		  padding: 10px;
+		  width: 130px;
+		  cursor: pointer;
+		}
+		.submit2:hover{
+			color: cornflowerblue;
+		}
+		#file-upload{
+			margin-top: 50px;
+			transform: translate(-50%,-0%);		
+		}
+		#file-upload:hover{
+        color: cornflowerblue;
+    }
+	</style>
+
+
+</head>
+
+<body>
+    <div class="toplogo" id="toplogoID">
+        <center>
+            <h1>Together We will Beat Cancer</h1>
+        </center>
+    </div>
+
+    <div class="navbar" id="navbarID">
+        <label class="logo">V<label id="sub">isual</label> V<label id="sub">elocity</label></label>
+        <a href={{ url_for('home')}}#contact>Contact Us</a>
+        <a href={{ url_for('home')}}#team>Team</a>
+        <a href={{ url_for('home')}}#predict>Predict</a>
+        <a class="active" href={{ url_for('home')}}#about>Home</a>
+    </div>
+
+	<center>
+		<div class="wrong-file">
+			<h1  style="margin-top: 25px;margin-left: 15px;">Check More Images</h1>
+			<img src="../static/ml/{{filepath}}">
+			<h4>{{variable}}</h4>
+			<div class="background">
+			<div id="file-upload">				
+                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                    <input name="file" type="file" accept="image/*" id="upload-box">
+                    <br><br>
+                    <center><b><input type="submit" class="submit submit2" value="Submit More" id="upload-box"></b></center>
+                </form>
+				</div>
+                <!--<div id="file-upload">
+                    <input type="file" id="upload-box">-->
+            </div>
+		</div>
+	</center>
+	<div class="contact-us">
+		<div class="footer ">
+
+			<a href="#facebook" class="fa fa-facebook"></a>
+			<a href="#twitter" class="fa fa-twitter"></a>
+			<a href="#linkedin" class="fa fa-linkedin"></a>
+			<a href="#instagram" class="fa fa-instagram"></a>
+
+		</div>
+		<h4>For More Info Follow us</h4>
+		<div id="contact">
+			<a href="#privacy policty">privacy policy</a><br>
+			<a href="#contactus">contactus</a>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

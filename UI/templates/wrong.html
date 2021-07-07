@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<title>Wrong</title>
+
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<style>
+    .wrong-file img{
+        margin-top: 20px;
+    }
+    .background{
+        background-image: none;
+        padding:0;
+        margin: -25px;
+        padding-bottom: 200px;
+    }
+    .submit2{
+      padding: 10px;
+      width: 130px;
+      cursor: pointer;
+    }
+    #file-upload{
+        margin-top: 50px;
+        transform: translate(-50%,-0%);
+    }
+    #file-upload:hover{
+        color: cornflowerblue;
+    }
+    .submit2:hover{
+			color: cornflowerblue;
+		}
+</style>
+<body>
+    <div class="toplogo" id="toplogoID">
+        <center>
+            <h1>Together We will Beat Cancer</h1>
+        </center>
+    </div>
+
+    <div class="navbar" id="navbarID">
+        <label class="logo">V<label id="sub">isual</label> V<label id="sub">elocity</label></label>
+        <a href={{ url_for('home')}}#contact>Contact Us</a>
+        <a href={{ url_for('home')}}#team>Team</a>
+        <a href={{ url_for('home')}}#predict>Predict</a>
+        <a class="active" href={{ url_for('home')}}#about>Home</a>
+    </div>
+<center>
+    <div class="wrong-file">
+        <h1  style="margin-top: 25px;margin-left: 15px;">Wrong Image</h1>
+        <img src="../static/wrong.gif">
+        <h4>Upload proper image</h4>
+        <div class="background">
+        <div id="file-upload">				
+            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                <input name="file" type="file" accept="image/*" id="upload-box">
+                <br><br>
+                <center><b><input type="submit" class="submit submit2" value="Submit More" id="upload-box"></b></center>
+            </form>
+            </div>
+            <!--<div id="file-upload">
+                <input type="file" id="upload-box">-->
+        </div>
+
+    </div>
+
+</center>
+   
+<div class="contact-us">
+    <div class="footer ">
+
+        <a href="#facebook" class="fa fa-facebook"></a>
+        <a href="#twitter" class="fa fa-twitter"></a>
+        <a href="#linkedin" class="fa fa-linkedin"></a>
+        <a href="#instagram" class="fa fa-instagram"></a>
+
+    </div>
+    <h4>For More Info Follow us</h4>
+    <div id="contact">
+        <a href="#privacy policty" >privacy policy</a><br>
+        <a href="#contactus" >contactus</a>
+            </div>
+        
+</div>
+
+
+
+
+</body>
+<script src="https://kit.fontawesome.com/a6761c511f.js" crossorigin="anonymous"></script>
+
+</html>

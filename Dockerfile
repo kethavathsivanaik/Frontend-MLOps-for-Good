@@ -16,5 +16,5 @@ RUN chmod +x entrypoint.sh
 
 #CMD [ "flask", "run", "--host", "0.0.0.0" ]
 
-ENTRYPOINT /app/entrypoint.sh ; flask run --host 0.0.0.0 ; /bin/bash
+ENTRYPOINT /app/entrypoint.sh ; cd UI && flask run --host 0.0.0.0 
 
